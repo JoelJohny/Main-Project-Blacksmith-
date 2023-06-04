@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="cards grid-row">
+      <div class="card " *ngFor="let di of blacklist;let 
+      i=index;">
+        <div class="card-top">
+          <!-- style="max-height: 359px;width: auto;" -->
+          <img [src]="di.Image" class="img-fluid" alt="Blog Name" >
+        </div>
+        <div class="card-info">
+          <h2>{{di.Blacksmith_name}}</h2>
+                 </div>
+        <div class="card-bottom flex-row">
+          <a  class="read-more btn" [routerLink]="['/UserMaster/blacksmithviewmore',di.Blacksmithid]">View More</a>
+          <!-- <a href="#" class="button btn-yellow" [routerLink]="['/UserMaster/blacksmithviewmore',di.Blacksmithid]"> More</a> -->
+        </div>
+      </div>
+     
+    </div>    
+  </div>

@@ -1,0 +1,100 @@
+
+    
+      <div class="page-content py-2" style="background-color: #eee">
+        <div class="container">
+  <div class="resume-container">
+    <div class="shadow-1-strong bg-white my-5" id="intro">
+      <div class="bg-info text-white">
+        <div class="cover bg-image">
+          <img src="/assets/guest/img/header-background.jpg" style="width: 1116px;"/>
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+            <div class="text-center p-5" style="margin-top: -30pc;">
+              <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" [src]="blacklist.Image" width="160" height="160"/></div>
+              <div class="header-bio mt-3">
+                <div data-aos="zoom-in" data-aos-delay="0">
+                  <h2 class="h1" style="color: #fff">{{blacklist.Blacksmith_name}}</h2>
+                  <p>Blacksmith Worker</p>
+                </div>
+                
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="shadow bg-white my-5 p-5" id="skills">
+      <div class="row p-3 py-5" *ngFor="let gi of Gallerylist;">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="text-right">Gallery View</h4>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" [src]="gi.Image"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp" [src]="gi.Image1"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" [src]="gi.Image2"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" [src]="gi.Image3"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp" [src]="gi.Image4"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp" [src]="gi.Image5"
+                class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+        </div>
+    </div>
+    </div>
+    <!-- <div class="shadow bg-white my-5 p-5" id="experience">
+      
+    </div> -->
+   
+    
+    <div class="shadow bg-white my-5 p-5" id="references">
+      <div class="reference-section">
+        <h2 class="h2 fw-light mb-4">Products</h2>
+        <div class="row"> 
+          <div class="col-md-5 card1 shadow mx-4 p-2" style="cursor: pointer;" *ngFor="let di of productlist;">
+            <div class="d-flex mb-2" [routerLink]="['/UserMaster/productbooking',di.Productid]" >
+              <div class="avatar"><img [src]="di.Image" width="60" height="60"/></div>
+              <div class="header-bio m-3 mb-0">
+                <h3 class="h6 mb-1" data-aos="fade-left" data-aos-delay="0">{{di.Product_name}}</h3>
+                
+                <p class="text-muted text-small" data-aos="fade-left" data-aos-delay="100">₹{{di.Price}}</p>
+              </div>
+            </div>
+            <div class="d-flex"><i class="text-secondary "></i>
+              <p class="lead mx-2" data-aos="fade-left" data-aos-delay="100">{{di.Product_Description}}</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="shadow bg-white my-5 p-5" id="contact">
+      <div class="contant-section">
+        <h2 class="h2 fw-light text mb-4">Contact</h2>
+        <div class="row mb-4">
+          <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+            <div class="mt-1">
+              <div class="h6"><i class="fa fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i>{{blacklist.Phone}}</div>
+              <div class="h6"><i class="fa fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i>{{blacklist.Email}}</div>
+              <div class="h6"><i class="fa fa-map-marker pe-2 text-muted" style="width:24px;opacity:0.85;"></i>{{blacklist.Address}},{{blacklist.State}},{{blacklist.Country}}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pincode:{{blacklist.Pincode}}</div>
+
+            </div>
+           
+          </div>
+                 </div>
+      </div>
+    </div>
+  </div></div>
+      </div>
+      

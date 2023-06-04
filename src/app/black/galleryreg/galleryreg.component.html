@@ -1,0 +1,87 @@
+<div class="container rounded border bg-white mt-5 mb-5">
+    
+        <div class="row">
+            <!-- [formGroup]="profileeditform"  -->
+            
+            <div class="col-md-6 border">
+                <form [formGroup]="Galleryform">
+                <div class="p-3 py-5">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Gallery</h4>
+                    </div>
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center experience" style="
+                    margin-top: 10px;
+                ">
+                            <div class="row">
+                                <div class="col-md-12"> <input type="file" style="
+                        width: 20pc;margin-bottom: 15px;
+                    " class="form-control" id="file" (change)="handleFileInput($event)"></div>
+                                <div class="col-md-12"><input type="file" style="
+                        width: 20pc;margin-bottom: 15px;
+                    " class="form-control" id="file" (change)="handleFileInput1($event)"></div>
+                                <div class="col-md-12"><input type="file" style="
+                        width: 20pc;margin-bottom: 15px;
+                    " class="form-control" id="file" (change)="handleFileInput2($event)"></div>
+                                <div class="col-md-12"><input type="file" style="
+                        width: 20pc;margin-bottom: 15px;
+                    " class="form-control" id="file" (change)="handleFileInput3($event)"></div>
+                                <div class="col-md-12"><input type="file" style="
+                        width: 20pc;margin-bottom: 15px;
+                    " class="form-control" id="file" (change)="handleFileInput4($event)"></div>
+                                <div class="col-md-12"><input type="file" style="
+                        width: 20pc;margin-bottom: 15px;
+                    " class="form-control" id="file" (change)="handleFileInput5($event)"></div>
+                            </div>
+                        </div>
+
+                        <!-- (change)="handleFileInput($event)" -->
+                    </div>
+                    <!-- <input type="file" style="
+                width: 14pc;
+            " class="form-control" id="file" > -->
+
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" (click)="submit()" [disabled]="loading" type="button">Save
+                            Gallery</button></div>
+                </div>
+            </form>
+            </div>
+            <div class="col-md-6 border">
+                <!-- Gallery -->
+                <div class="row p-3 py-5" *ngFor="let gi of Gallerylist;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Gallery View</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" [src]="gi.Image"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp" [src]="gi.Image1"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" [src]="gi.Image2"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" [src]="gi.Image3"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp" [src]="gi.Image4"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp" [src]="gi.Image5"
+                            class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+                    </div>
+                </div>
+                <!-- Gallery -->
+            </div>
+        </div>
+    
+</div>
+
+<!-- <span class="border px-3 p-1 add-experience"><i
+    class="fa fa-plus"></i>&nbsp;Image</span> -->

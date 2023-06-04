@@ -1,0 +1,48 @@
+<div class="container rounded mt-5 bg-white p-md-5" style="
+margin-left: 300px;
+">
+    <div class="h2 font-weight-bold">Blacksmith Worker</div>
+    <div class="table-responsive">
+        <table class="table" style="
+        width: 1056px;
+    ">
+            <thead>
+                <tr>
+                    <th scope="col" style="
+                    width: 206px;
+                ">Slno</th>
+                    <th scope="col" style="
+                width: 206px;
+            ">Name</th>
+                    <th scope="col" style="
+                    width: 206px;
+                ">Email</th>
+                    <th scope="col" style="
+                    width: 206px;
+                ">Mobile</th>
+                    <th scope="col" style="
+                    width: 206px;
+                ">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let di of blacklist;let 
+                i=index;" class="bg-blue">
+                <td class="pt-3 mt-1">{{ i+1 }}</td>
+
+                    <td class="pt-2">
+                        <div class="pl-lg-4 pl-md-2 pl-1 name">{{ di.Blacksmith_name }}</div>
+                    </td>
+                    <td class="pt-3 mt-1">{{ di.Email }}</td>
+                    <td class="pt-3">{{ di.Phone }}</td>
+                    <td class="pt-3"><span (click)="delete(di.Blacksmithid)" class="fa fa-trash pl-3"></span></td>
+                    <!-- <td class="pt-3"><span class="fa fa-ellipsis-v btn"></span></td> -->
+                </tr>
+                <tr id="spacing-row">
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

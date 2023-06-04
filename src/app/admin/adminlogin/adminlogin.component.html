@@ -1,0 +1,107 @@
+<!-- <section class="vh-10 gradient-custom">
+  <div class="container h-100" style="
+  padding-top: 6rem;
+">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+<form [formGroup]='LoginForm' (ngSubmit)='onsubmit()'>
+              <h2 class="fw-bold mb-2 text-uppercase">Admin Login</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="typeEmailX" formControlName="email" class="form-control form-control-lg" />
+                <label class="form-label" for="typeEmailX">Email</label>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="typePasswordX" formControlName="password" class="form-control form-control-lg" />
+                <label class="form-label"  for="typePasswordX">Password</label>
+              </div>
+
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" routerLink="/ApplicationForm" href="#!">Sign Up</a></p>
+
+              <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+          </form>
+              
+
+            </div>
+
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url(/assets/guest/img/bg.jpg); height: 745px;">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"> Admin Login</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<!-- <h3 class="mb-4 text-center">Have an account?</h3> -->
+		      	<form [formGroup]='LoginForm' (ngSubmit)='onsubmit()' class="signin-form">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" formControlName="email" placeholder="Username" required>
+		      		</div>
+	            <div class="form-group">
+	              <input id="password-field" type="password" formControlName="password" class="form-control" placeholder="Password" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+					
+	            	<button type="submit" class="form-control btn btn-primary submit px-3 my-2">Sign In</button>
+					<button type="submit" [routerLink]="['/guestmaster/guesthome']" class="form-control btn btn-secondary  px-3"> <i class="fa-solid fa-arrow-left"></i>&nbsp;Back </button>
+	            </div>
+	            <!-- <div class="form-group d-md-flex">
+	            	<div class="w-50">
+		            	<label class="checkbox-wrap checkbox-primary">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="#" style="color: #fff">Forgot Password</a>
+								</div>
+	            </div> -->
+	          </form>
+	          <!-- <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+	          </div>  -->
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	</body>
+</html>
+

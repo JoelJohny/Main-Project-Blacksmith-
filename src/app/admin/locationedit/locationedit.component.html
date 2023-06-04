@@ -1,0 +1,57 @@
+<section class="h-100 h-custom" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <!-- <img src="https://district-tech.com/wp-content/uploads/2020/02/logo-black_Wordmark-Black.svg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo"> -->
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Location Registration</h3>
+             
+              <form class="px-md-2"  [formGroup]="locationeditform" >
+                <!-- <div class="mb-4">
+  
+                  <select class="form-control" formControlName="Districtid">
+                    <option value="">-- Select District --</option>
+                    <option *ngFor="let di of locationList" value="{{ di.id }}">
+                      {{di.District_name}}
+                    </option>
+                  </select>
+                  <label class="form-label" for="form3Example1q">District Name</label>
+                </div> -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example1q" class="form-control" formControlName="Location_name" />
+                  <label class="form-label" for="form3Example1q">Location Name</label>
+                </div>
+  
+                <!-- <div class="mb-4">
+  
+                  <select class="select">
+                    <option value="1" disabled>Class</option>
+                    <option value="2">Class 1</option>
+                    <option value="3">Class 2</option>
+                    <option value="4">Class 3</option>
+                  </select>
+  
+                </div> -->
+  
+                <!-- <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                  <div class="col-md-6">
+  
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1w" class="form-control" />
+                      <label class="form-label" for="form3Example1w">Registration code</label>
+                    </div>
+  
+                  </div>
+                </div> -->
+  
+                <button type="submit"  (click)="edit()"  class="btn btn-success btn-lg mb-1">Submit</button>
+               
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

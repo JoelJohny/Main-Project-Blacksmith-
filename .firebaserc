@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "blacksmith-workers-portal"
+  },
+  "targets": {
+    "blacksmith-workers-portal": {
+      "hosting": {
+        "BlackSmith": [
+          "blacksmith-workers-portal"
+        ]
+      }
+    }
+  }
+}

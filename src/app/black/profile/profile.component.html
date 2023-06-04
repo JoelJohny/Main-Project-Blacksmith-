@@ -1,0 +1,86 @@
+
+ <div class="py-4" style="background-color: #eee;"> 
+<div class="container rounded shadow border bg-white mt-5 mb-5">
+    <form [formGroup]="profileeditform">
+    <div class="row">
+        
+        <div class="col-md-3 border" >
+            <!-- *ngFor="let pi of profileList;" -->
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                    width="150px"
+                    src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" [src]="profileList.Image"><span
+                    class="font-weight-bold">{{ profileList.Blacksmith_name }}</span><span class="text-black-50">{{ profileList.Email }}</span><span>
+                </span></div>
+        </div>
+        <div class="col-md-5 border">
+            <div class="p-3 py-5">
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-12"><label class="labels">Name</label><input type="text" formControlName="Blacksmith_name" class="form-control"
+                            placeholder="first name" value=""></div>
+                   
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Mobile Number</label><input type="text"
+                            class="form-control" placeholder="enter phone number" formControlName="Phone" value="" maxlength="10">
+                        </div>
+                    <div class="col-md-6"><label class="labels">Email</label><input type="text"
+                            class="form-control" placeholder="enter Email" formControlName="Email" value="" readonly>
+                        </div>
+                    <div class="col-md-12"><label class="labels">Address Line </label><input type="text"
+                            class="form-control" placeholder="enter address line " formControlName="Address" value="">
+                        </div>
+                    <div class="col-md-12"><label class="labels">Pincode</label><input type="text" class="form-control"
+                            placeholder="enter pincode" formControlName="Pincode" value="" maxlength="6">
+                        </div>
+                    <div class="col-md-12"><label class="labels">District</label>
+                <select name="" id="" class="form-control" formControlName="Districtid" (change)="onChange($event)">
+                    <option value="">-- Select District --</option>
+                    <option *ngFor="let di of DistrictList" value="{{ di.id }}">
+                      {{di.District_name}}
+                    </option>
+                </select>
+            </div>
+                    <div class="col-md-12"><label class="labels">Location</label>
+                        <select name="" id="" class="form-control" formControlName="Locationid">
+                            <option value="">-- Select Location --</option>
+                            <option *ngFor="let lo of LocationList" value="{{ lo.Locationid }}">
+                              {{lo.Location_name}}
+                            </option>
+                        </select></div>
+                        
+                   
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control"
+                            placeholder="country" formControlName="Country" value=""></div>
+                    <div class="col-md-6"><label class="labels">State</label><input type="text"
+                            class="form-control" value="" formControlName="State" placeholder="state"></div>
+                            <!-- <div class="d-flex justify-content-between align-items-center experience" style="
+                        margin-top: 10px;
+                    "><span> Add Profile picture</span><span class="border px-3 p-1 add-experience"><i
+                                    class="fa fa-plus"></i>&nbsp;Image</span></div> -->
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" [disabled]="loading" (click)="submit()">Save
+                        Profile</button></div>
+            </div>
+        </div>
+        <div class="col-md-4 border">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience" style="
+                margin-top: 10px;
+            "><span> Add Profile picture</span>
+                            <input type="file" style="
+                            width: 14pc;
+                        " class="form-control" id="file" (change)="handleFileInput($event)"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+<!-- <span class="border px-3 p-1 add-experience"><i
+    class="fa fa-plus"></i>&nbsp;Image</span> -->
